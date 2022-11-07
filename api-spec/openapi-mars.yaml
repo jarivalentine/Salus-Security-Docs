@@ -137,3 +137,36 @@ components:
       example:
         value: See, the problem is that God gives men a brain and a penis, and only enough blood to run one at a time.
         id: 89
+
+    Flag:
+      type: object
+      required:
+      - id
+      - label
+      - victim
+      - aggressor
+      - location
+      - time
+      - validity
+      properties:
+        id:
+          type: integer
+          format: i32
+          example: 4
+        label:
+          type: string
+          example: "Armed"
+        victim:
+          $ref: '#/components/schemas/User'
+        aggressor:
+          $ref: '#/components/schemas/User'
+        location:
+          type: string
+          example: "51.191624,3.214377"
+        time:
+          type: string
+          format: date-time
+          example: "2022-11-07T11:43:59.405931"
+        validity:
+          type: boolean
+          example: true
