@@ -13,6 +13,7 @@ paths:
   /flags:
     get:
       description: Retrieve all Flags
+      summary: Retrieve all Flags
       operationId: getAllFlags
       responses:
         '200':
