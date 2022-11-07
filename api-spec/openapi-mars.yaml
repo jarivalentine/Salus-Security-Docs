@@ -6,11 +6,11 @@ info:
 servers:
   - url: https://project-ii.ti.howest.be/mars-11
     description: 'Public API'
-  - url: http://localhost:8080/
+  - url: http://localhost:8080/api
     description: 'Local API'
 paths:
 
-  /api/getAllFlags:
+  /flags:
     get:
       description: Retrieve all Flags
       operationId: getAllFlags
@@ -22,7 +22,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FlagSet'
 
-  /api/quotes:
+  /quotes:
     post:
       description: Create a nice quote
       operationId: createQuote
@@ -53,7 +53,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/quote'
-  /api/quotes/{quoteId}:
+  /quotes/{quoteId}:
     get:
       description: Get a nice quote
       operationId: getQuote
@@ -156,9 +156,11 @@ components:
       required:
       - id
       - label
+      - type
       - victim
       - aggressor
-      - coordinates
+      - longitude
+      - latitude
       - time
       - validity
       properties:
@@ -166,10 +168,13 @@ components:
           type: integer
           format: i32
           example: 4
-        label:
+        labels:
+          type: array
+          example: ["lethal weapon", "critical condition", "child endangerment"]
+        type:
           type: string
-          example: "Armed"
-        victimId:
+          example: "Assault"
+        reporterId:
           type: integer
           format: i32
           example: 5
@@ -177,9 +182,12 @@ components:
           type: integer
           format: i32
           example: 13
-        coordinates:
+        latitude:
           type: string
-          example: "51.191624,3.214377"
+          example: "51.191624"
+        longitude:
+          type: string
+          example: "3.214377"
         time:
           type: string
           format: date-time
