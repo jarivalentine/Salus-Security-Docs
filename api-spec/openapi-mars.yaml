@@ -157,9 +157,13 @@ components:
           type: string
           example: "Armed"
         victim:
-          $ref: '#/components/schemas/User'
+          type: integer
+          format: i32
+          example: 5
         aggressor:
-          $ref: '#/components/schemas/User'
+          type: integer
+          format: i32
+          example: 13
         location:
           type: string
           example: "51.191624,3.214377"
