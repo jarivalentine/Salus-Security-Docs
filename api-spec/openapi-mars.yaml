@@ -9,6 +9,19 @@ servers:
   - url: http://localhost:8080/
     description: 'Local API'
 paths:
+
+  /api/getAllFlags:
+    get:
+      description: Retrieve all Flags
+      operationId: getAllFlags
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlagSet'
+
   /api/quotes:
     post:
       description: Create a nice quote
@@ -145,7 +158,7 @@ components:
       - label
       - victim
       - aggressor
-      - location
+      - coordinates
       - time
       - validity
       properties:
@@ -156,15 +169,15 @@ components:
         label:
           type: string
           example: "Armed"
-        victim:
+        victimId:
           type: integer
           format: i32
           example: 5
-        aggressor:
+        aggressorId:
           type: integer
           format: i32
           example: 13
-        location:
+        coordinates:
           type: string
           example: "51.191624,3.214377"
         time:
@@ -174,3 +187,8 @@ components:
         validity:
           type: boolean
           example: true
+    
+    FlagSet:
+      type: array
+      items:
+        $ref: '#/components/schemas/Flag'
