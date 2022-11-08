@@ -28,6 +28,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/IncidentSet'
+      tags:
+          - Incidents
 
     post:
       description: Create a incident
@@ -38,7 +40,27 @@ paths:
         content:
           application/json:
               schema:
-                $ref: '#/components/schemas/Incident'
+                  type: object
+                  required:
+                  - reporterId
+                  - latitude
+                  - longitude
+                  - time
+                  properties:
+                    reporterId:
+                      type: integer
+                      format: i32
+                      example: 5
+                    latitude:
+                      type: string
+                      example: "51.191624"
+                    longitude:
+                      type: string
+                      example: "3.214377"
+                    time:
+                      type: string
+                      format: date-time
+                      example: "2022-11-07T11:43:59.405931"
       responses:
         '201':
           description: Created a incident
