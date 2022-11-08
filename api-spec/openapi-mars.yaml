@@ -135,23 +135,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UserSet'
-    post:
-      description: Create a user
-      summary: Create a user
-      operationId: CreateUser
-      requestBody:
-        required: true
-        content:
-          application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-      responses:
-        '201':
-          description: Created a user
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
       tags:
         - Users
 
