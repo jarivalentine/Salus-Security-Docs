@@ -6,7 +6,7 @@ info:
 servers:
   - url: https://project-ii.ti.howest.be/mars-11
     description: 'Public API'
-  - url: http://localhost:8080/api
+  - url: http://localhost:8080/
     description: 'Local API'
 
 tags:
@@ -16,7 +16,7 @@ tags:
     description: Retrieve user information.
 
 paths:
-  /incidents:
+  /api/incidents:
     get:
       description: Retrieve all incidents
       summary: Retrieve all incidents
@@ -71,7 +71,7 @@ paths:
       tags:
         - Incidents
 
-  /incidents/{id}:
+  /api/incidents/{id}:
     get:
       description: Retrieve one incident
       summary: Retrieve one incidents
@@ -93,7 +93,7 @@ paths:
       tags:
         - Incidents
 
-  /incidents/sol:
+  /api/incidents/sol:
     get:
       description: Retrieve all incidents within a sol
       summary: Retrieve all incidents within a sol
@@ -108,7 +108,7 @@ paths:
       tags:
         - Incidents
   
-  /incidents/year:
+  /api/incidents/year:
     get:
       description: Retrieve all incidents within a year
       summary: Retrieve all incidents within a year
@@ -123,22 +123,7 @@ paths:
       tags:
         - Incidents
 
-  /users:
-    get:
-      description: Retrieve all users 
-      summary: Retrieve all users
-      operationId: getAllUsers
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UserSet'
-      tags:
-        - Users
-
-  /users/{id}:
+  /api/users/{id}:
     get:
       description: Retrieve one user 
       summary: Retrieve one user
@@ -159,7 +144,7 @@ paths:
       tags:
         - Users
 
-  /users/{id}/incidents:
+  /api/users/{id}/incidents:
     get:
       description: Retrieve from one user all incidents.
       summary: Retrieve from one user all incidents.
@@ -180,7 +165,7 @@ paths:
       tags:
         - Users
   
-  /users/{id}/incidents/{incidentId}:
+  /api/users/{id}/incidents/{incidentId}:
     get:
       description: Retrieve from one user one incidents.
       summary: Retrieve from one user one incidents.
@@ -206,7 +191,7 @@ paths:
       tags:
         - Users
   
-  /users/{id}/incidents/helped:
+  /api/users/{id}/incidents/helped:
     get:
       description: Retrieve from one user all incidents where a user has helped.
       summary: Retrieve from one user all incidents where a user has helped.
@@ -227,7 +212,7 @@ paths:
       tags:
         - Users
 
-  /users/{id}/incidents/sol:
+  /api/users/{id}/incidents/sol:
     get:
       description: Retrieve from one user all incidents within a sol.
       summary: Retrieve from one user all incidents within a sol.
@@ -248,7 +233,7 @@ paths:
       tags:
         - Users
   
-  /users/{id}/incidents/year:
+  /api/users/{id}/incidents/year:
     get:
       description: Retrieve from one user all incidents within a year.
       summary: Retrieve from one user all incidents within a year.
@@ -269,7 +254,7 @@ paths:
       tags:
         - Users
 
-  /quotes:
+  /api/quotes:
     post:
       description: Create a nice quote
       operationId: createQuote
@@ -301,7 +286,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/quote'
 
-  /quotes/{quoteId}:
+  /api/quotes/{quoteId}:
     get:
       description: Get a nice quote
       operationId: getQuote
