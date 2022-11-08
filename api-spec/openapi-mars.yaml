@@ -411,7 +411,6 @@ components:
           example: 5
         aggressorId:
           type: integer
-
           example: 13
         latitude:
           type: string
