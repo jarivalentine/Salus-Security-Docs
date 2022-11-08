@@ -50,7 +50,6 @@ paths:
                   properties:
                     reporterId:
                       type: integer
-                      format: i32
                       example: 5
                     latitude:
                       type: string
@@ -400,7 +399,6 @@ components:
       properties:
         id:
           type: integer
-          format: i32
           example: 4
         labels:
           type: array
@@ -410,11 +408,9 @@ components:
           example: "Assault"
         reporterId:
           type: integer
-          format: i32
           example: 5
         aggressorId:
           type: integer
-          format: i32
           example: 13
         latitude:
           type: string
@@ -440,7 +436,6 @@ components:
       properties:
         id:
           type: integer
-          format: i32
           example: 2
         firstname:
           type: string
