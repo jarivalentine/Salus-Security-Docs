@@ -187,6 +187,12 @@ paths:
       description: Subscribe user to Salus Security Premium
       summary: Subscribe user to Salus Security Premium
       operationId: SubscribeUser
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: "Premium added"
@@ -198,6 +204,12 @@ paths:
       description: Unsubscribe user to Salus Security Premium
       summary: Unsubscribe user to Salus Security Premium
       operationId: UnSubscribeUser
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: "Premium removed"
@@ -352,6 +364,9 @@ components:
           example: 4
         labels:
           type: array
+          items:
+            oneOf:
+              - type: string
           example: ["lethal weapon", "critical condition", "child endangerment"]
         type:
           type: string
