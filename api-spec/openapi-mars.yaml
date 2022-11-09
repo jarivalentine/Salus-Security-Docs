@@ -71,7 +71,7 @@ paths:
     get:
       description: Retrieve one incident
       summary: Retrieve one incidents
-      operationId: getOneIncident
+      operationId: getIncident
       parameters:
         - in: path
           name: id
@@ -123,7 +123,7 @@ paths:
     get:
       description: Retrieve one user 
       summary: Retrieve one user
-      operationId: getOneUser
+      operationId: getUser
       parameters:
         - in: path
           name: id
