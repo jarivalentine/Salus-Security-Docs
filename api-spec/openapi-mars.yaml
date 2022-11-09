@@ -21,7 +21,7 @@ paths:
     get:
       description: Retrieve all incidents
       summary: Retrieve all incidents
-      operationId: getIncidents
+      operationId: getAllIncidents
       responses:
         '200':
           description: OK
@@ -35,7 +35,7 @@ paths:
     post:
       description: Create a incident
       summary: Create a incident
-      operationId: Create an incident
+      operationId: CreateIncident
       requestBody:
         required: true
         content:
@@ -57,10 +57,6 @@ paths:
                     longitude:
                       type: string
                       example: "3.214377"
-                    time:
-                      type: string
-                      format: date-time
-                      example: "2022-11-07T11:43:59.405931"
       responses:
         '201':
           description: Created a incident
@@ -75,7 +71,7 @@ paths:
     get:
       description: Retrieve one incident
       summary: Retrieve one incidents
-      operationId: getIncident
+      operationId: getOneIncident
       parameters:
         - in: path
           name: id
@@ -97,14 +93,14 @@ paths:
     get:
       description: Retrieve all incidents within a sol
       summary: Retrieve all incidents within a sol
-      operationId: getIncidentOneSol
+      operationId: getIncidentsOneSol
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Incident'
+                $ref: '#/components/schemas/IncidentSet'
       tags:
         - Incidents
   
@@ -112,14 +108,14 @@ paths:
     get:
       description: Retrieve all incidents within a year
       summary: Retrieve all incidents within a year
-      operationId: getIncidentOneYear
+      operationId: getIncidentsOneYear
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Incident'
+                $ref: '#/components/schemas/IncidentSet'
       tags:
         - Incidents
 
@@ -127,7 +123,7 @@ paths:
     get:
       description: Retrieve one user 
       summary: Retrieve one user
-      operationId: getAllUser
+      operationId: getOneUser
       parameters:
         - in: path
           name: id
@@ -148,7 +144,7 @@ paths:
     get:
       description: Retrieve from one user all incidents.
       summary: Retrieve from one user all incidents.
-      operationId: getAllIncidentsFromOneUser
+      operationId: getAllIncidentsByUserId
       parameters:
         - in: path
           name: id
@@ -165,37 +161,11 @@ paths:
       tags:
         - Users
   
-  /api/users/{id}/incidents/{incidentId}:
-    get:
-      description: Retrieve from one user one incidents.
-      summary: Retrieve from one user one incidents.
-      operationId: getOneIncidentsFromOneUser
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: string
-          required: true
-        - in: path
-          name: incidentId
-          schema:
-            type: string
-          required: true
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Incident'
-      tags:
-        - Users
-  
   /api/users/{id}/incidents/helped:
     get:
       description: Retrieve from one user all incidents where a user has helped.
       summary: Retrieve from one user all incidents where a user has helped.
-      operationId: getAllHelpedIncidentsFromOneUser
+      operationId: getAllHelpedIncidentsByUserId
       parameters:
         - in: path
           name: id
@@ -212,45 +182,25 @@ paths:
       tags:
         - Users
 
-  /api/users/{id}/incidents/sol:
-    get:
-      description: Retrieve from one user all incidents within a sol.
-      summary: Retrieve from one user all incidents within a sol.
-      operationId: getAllIncidentsFromOneUserWithinOneSol
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: string
-          required: true
+  /api/users/{id}/subscribe:
+    put:
+      description: Subscribe user to Salus Security Premium
+      summary: Subscribe user to Salus Security Premium
+      operationId: SubscribeUser
       responses:
         '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/IncidentSet'
+          description: "Premium added"
       tags:
         - Users
-  
-  /api/users/{id}/incidents/year:
-    get:
-      description: Retrieve from one user all incidents within a year.
-      summary: Retrieve from one user all incidents within a year.
-      operationId: getAllIncidentsFromOneUserWithinOneYear
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: string
-          required: true
+    
+  /api/users/{id}/unsubscribe:
+    put:
+      description: Unsubscribe user to Salus Security Premium
+      summary: Unsubscribe user to Salus Security Premium
+      operationId: UnSubscribeUser
       responses:
         '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/IncidentSet'
+          description: "Premium removed"
       tags:
         - Users
 
