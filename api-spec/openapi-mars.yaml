@@ -21,7 +21,7 @@ paths:
     get:
       description: Retrieve all incidents
       summary: Retrieve all incidents
-      operationId: getAllIncidents
+      operationId: getIncidents
       responses:
         '200':
           description: OK
