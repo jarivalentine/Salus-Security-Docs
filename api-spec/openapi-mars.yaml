@@ -46,11 +46,10 @@ paths:
                   - reporterId
                   - latitude
                   - longitude
-                  - time
                   properties:
                     reporterId:
-                      type: integer
-                      example: 5
+                      type: string
+                      example: "1989-01-28_AL"
                     latitude:
                       type: string
                       example: "51.191624"
