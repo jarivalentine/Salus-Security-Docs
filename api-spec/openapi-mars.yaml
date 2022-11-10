@@ -429,7 +429,7 @@ components:
           example: "1989-01-28_AL"
         firstname:
           type: string
-          example: "Alison"
+          example: "Adison"
         lastname:
           type: string
           example: "Lopez"
