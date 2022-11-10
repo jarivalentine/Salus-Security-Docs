@@ -397,11 +397,11 @@ components:
           type: string
           example: "Assault"
         reporterId:
-          type: integer
-          example: 5
+          type: string
+          example: "1989-01-28_AL"
         aggressorId:
-          type: integer
-          example: 13
+          type: string
+          example: "1992-02-04_SH"
         latitude:
           type: string
           example: "51.191624"
@@ -425,7 +425,7 @@ components:
        - subscribed
       properties:
         id:
-          type: integer
+          type: string
           example: "1989-01-28_AL"
         firstname:
           type: string
