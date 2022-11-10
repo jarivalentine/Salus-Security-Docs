@@ -66,16 +66,16 @@ paths:
       tags:
         - Incidents
 
-  /api/incidents/{id}:
+  /api/incidents/{incidentId}:
     get:
       description: Retrieve one incident.
       summary: Retrieve one incidents.
       operationId: getIncident
       parameters:
         - in: path
-          name: id
+          name: incidentId
           schema:
-            type: string
+            type: integer
           required: true
 
       responses:
@@ -195,7 +195,7 @@ paths:
         - in: path
           name: incidentId
           schema:
-            type: string
+            type: integer
           required: true
       responses:
         '200':
