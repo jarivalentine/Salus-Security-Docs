@@ -19,8 +19,8 @@ paths:
 
   /api/incidents:
     get:
-      description: Retrieve all incidents
-      summary: Retrieve all incidents
+      description: Retrieve all incidents.
+      summary: Retrieve all incidents.
       operationId: getIncidents
       responses:
         '200':
@@ -33,9 +33,9 @@ paths:
           - Incidents
 
     post:
-      description: Create a incident
-      summary: Create a incident
-      operationId: CreateIncident
+      description: Create an incident.
+      summary: Create an incident.
+      operationId: createIncident
       requestBody:
         required: true
         content:
@@ -68,8 +68,8 @@ paths:
 
   /api/incidents/{id}:
     get:
-      description: Retrieve one incident
-      summary: Retrieve one incidents
+      description: Retrieve one incident.
+      summary: Retrieve one incidents.
       operationId: getIncident
       parameters:
         - in: path
@@ -90,8 +90,8 @@ paths:
 
   /api/incidents/sol:
     get:
-      description: Retrieve all incidents within a sol
-      summary: Retrieve all incidents within a sol
+      description: Retrieve all incidents within a sol.
+      summary: Retrieve all incidents within a sol.
       operationId: getIncidentsOneSol
       responses:
         '200':
@@ -105,8 +105,8 @@ paths:
   
   /api/incidents/year:
     get:
-      description: Retrieve all incidents within a year
-      summary: Retrieve all incidents within a year
+      description: Retrieve all incidents within a year.
+      summary: Retrieve all incidents within a year.
       operationId: getIncidentsOneYear
       responses:
         '200':
@@ -120,8 +120,8 @@ paths:
 
   /api/users/{id}:
     get:
-      description: Retrieve one user 
-      summary: Retrieve one user
+      description: Retrieve one user.
+      summary: Retrieve one user.
       operationId: getUser
       parameters:
         - in: path
@@ -181,10 +181,36 @@ paths:
       tags:
         - Users
 
+  /api/users/{id}/incidents/{incidentId}/help:
+    post:
+      description: Help a user during a specific incident.
+      summary: Help a user during a specific incident.
+      operationId: helpUserByIdByIncidentId
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+        - in: path
+          name: incidentId
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Incident'
+      tags:
+        - Users
+
   /api/users/{id}/subscribe:
     put:
-      description: Subscribe user to Salus Security Premium
-      summary: Subscribe user to Salus Security Premium
+      description: Subscribe user to Salus Security Premium.
+      summary: Subscribe user to Salus Security Premium.
       operationId: SubscribeUser
       parameters:
         - in: path
@@ -200,8 +226,8 @@ paths:
     
   /api/users/{id}/unsubscribe:
     put:
-      description: Unsubscribe user to Salus Security Premium
-      summary: Unsubscribe user to Salus Security Premium
+      description: Unsubscribe user to Salus Security Premium.
+      summary: Unsubscribe user to Salus Security Premium.
       operationId: UnSubscribeUser
       parameters:
         - in: path
@@ -371,11 +397,11 @@ components:
           type: string
           example: "Assault"
         reporterId:
-          type: integer
-          example: 5
+          type: string
+          example: "1989-01-28_AL"
         aggressorId:
-          type: integer
-          example: 13
+          type: string
+          example: "1992-02-04_SH"
         latitude:
           type: string
           example: "51.191624"
@@ -399,14 +425,14 @@ components:
        - subscribed
       properties:
         id:
-          type: integer
-          example: 2
+          type: string
+          example: "1989-01-28_AL"
         firstname:
           type: string
-          example: "Kevin"
+          example: "Adison"
         lastname:
           type: string
-          example: "Gates"
+          example: "Lopez"
         subscribed:
           type: boolean
           example: true
