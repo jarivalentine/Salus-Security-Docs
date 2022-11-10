@@ -211,7 +211,7 @@ paths:
     put:
       description: Subscribe user to Salus Security Premium.
       summary: Subscribe user to Salus Security Premium.
-      operationId: SubscribeUser
+      operationId: subscribeUser
       parameters:
         - in: path
           name: id
@@ -228,7 +228,7 @@ paths:
     put:
       description: Unsubscribe user to Salus Security Premium.
       summary: Unsubscribe user to Salus Security Premium.
-      operationId: UnSubscribeUser
+      operationId: unSubscribeUser
       parameters:
         - in: path
           name: id
