@@ -220,7 +220,11 @@ paths:
           required: true
       responses:
         '200':
-          description: "Premium added"
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
       tags:
         - Users
     
@@ -237,7 +241,11 @@ paths:
           required: true
       responses:
         '200':
-          description: "Premium removed"
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
       tags:
         - Users
 
