@@ -426,13 +426,13 @@ components:
       properties:
         id:
           type: integer
-          example: 2
+          example: "1989-01-28_AL"
         firstname:
           type: string
-          example: "Kevin"
+          example: "Alison"
         lastname:
           type: string
-          example: "Gates"
+          example: "Lopez"
         subscribed:
           type: boolean
           example: true
