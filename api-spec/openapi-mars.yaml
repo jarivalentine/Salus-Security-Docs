@@ -88,33 +88,47 @@ paths:
       tags:
         - Incidents
 
-  /api/incidents/sol:
+  /api/incidents/{incidentId}/bystanders:
     get:
-      description: Retrieve all incidents within a sol.
-      summary: Retrieve all incidents within a sol.
-      operationId: getIncidentsOneSol
+      description: Retrieve all bystanders from one incident.
+      summary: Retrieve all bystanders from one incidents.
+      operationId: getBystandersByIncidentId
+      parameters:
+        - in: path
+          name: incidentId
+          schema:
+            type: integer
+          required: true
+
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/IncidentSet'
+                $ref: '#/components/schemas/UserSet'
       tags:
         - Incidents
-  
-  /api/incidents/year:
+
+  /api/incidents/{incidentId}/aggressors:
     get:
-      description: Retrieve all incidents within a year.
-      summary: Retrieve all incidents within a year.
-      operationId: getIncidentsOneYear
+      description: Retrieve all aggressors from one incident.
+      summary: Retrieve all aggressors from one incidents.
+      operationId: getAggressorsByIncidentId
+      parameters:
+        - in: path
+          name: incidentId
+          schema:
+            type: integer
+          required: true
+
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/IncidentSet'
+                $ref: '#/components/schemas/UserSet'
       tags:
         - Incidents
 
