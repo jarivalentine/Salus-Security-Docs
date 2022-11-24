@@ -14,7 +14,7 @@ tags:
     description: Retrieve and create incidents.
   - name: Users
     description: Retrieve user information.
-  - name: Extra
+  - name: Not implemented
     description: Endpoints outside of our POC
 
 paths:
@@ -301,7 +301,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/DoorSet'
       tags:
-        - Extra
+        - Not implemented
   
   /api/users/{userId}/doors/{doorId}/lock:
     put:
@@ -327,7 +327,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Door'
       tags:
-        - Extra
+        - Not implemented
         
   /api/users/{userId}/doors/{doorId}/unlock:
     put:
@@ -353,7 +353,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Door'
       tags:
-        - Extra
+        - Not implemented
         
   /api/users/{userId}/doors/add:
     post:
@@ -374,7 +374,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Door'
       tags:
-        - Extra
+        - Not implemented
         
   /api/users/{userId}/doors/{doorId}/remove:
     delete:
@@ -400,7 +400,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Door'
       tags:
-        - Extra
+        - Not implemented
 
 components:
   schemas:
