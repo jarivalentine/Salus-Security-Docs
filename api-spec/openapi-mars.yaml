@@ -134,6 +134,21 @@ paths:
       tags:
         - Incidents
 
+  /api/users:
+    get:
+      description: Retrieve all users.
+      summary: Retrieve all users.
+      operationId: getUsers
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserSet'
+      tags:
+        - Users
+
   /api/users/{id}:
     get:
       description: Retrieve one user.
