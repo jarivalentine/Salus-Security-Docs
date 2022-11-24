@@ -14,6 +14,8 @@ tags:
     description: Retrieve and create incidents.
   - name: Users
     description: Retrieve user information.
+  - name: Not implemented
+    description: Endpoints outside of our POC
 
 paths:
 
@@ -131,6 +133,21 @@ paths:
                 $ref: '#/components/schemas/UserSet'
       tags:
         - Incidents
+
+  /api/users:
+    get:
+      description: Retrieve all users.
+      summary: Retrieve all users.
+      operationId: getUsers
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserSet'
+      tags:
+        - Users
 
   /api/users/{id}:
     get:
@@ -262,181 +279,171 @@ paths:
                 $ref: '#/components/schemas/User'
       tags:
         - Users
+  
 
-  /api/quotes:
-    post:
-      description: Create a nice quote
-      operationId: createQuote
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                quote:
-                  type: string
-              required:
-                - quote
-            examples:
-              the-future:
-                value:
-                  quote: The future depends on what you do today.
-                description: You can't argue with the wise guy Mahatma Gandhi, can you?
-          text/plain:
-            schema:
-              type: string
-              example: "If everybody minded their own business, the world would go around a great deal faster than it does."
-      responses:
-        '201':
-          description: Created
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/quote'
-
-  /api/quotes/{quoteId}:
+  /api/users/{userId}/doors:
     get:
-      description: Get a nice quote
-      operationId: getQuote
+      description: Retrieve all doors from one user.
+      summary: Retrieve all doors from one user.
+      operationId: getDoorsByUserId
       parameters:
         - in: path
-          name: quoteId
-          required: true
+          name: userId
           schema:
-            type: integer
-          description: The quote id
+            type: string
+          required: true
+
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/quote'
-              examples:
-                two infinite things:
-                  value:
-                    value: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
-                    id: 21
-                  description: Albert Einstein at his best :)
-                finding magic:
-                  value:
-                    value: "Those who don't believe in magic will never find it."
-                    id: 34
-                  description: Who doesn't love Roald Dahl?
+                $ref: '#/components/schemas/DoorSet'
+      tags:
+        - Not implemented
+  
+  /api/users/{userId}/doors/{doorId}/lock:
     put:
-      description: Update nice quote
-      operationId: updateQuote
+      description: Lock one door using doorId of a specific user using userId.
+      summary: Lock one door using doorId of a specific user using userId.
+      operationId: lockDoor
       parameters:
         - in: path
-          name: quoteId
+          name: userId
+          schema:
+            type: string
           required: true
+        - in: path
+          name: doorId
           schema:
             type: integer
-          description: The quote ID
-          example: 42
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                quote:
-                  type: string
-              required:
-                - quote
-            examples:
-              dragons exist:
-                value:
-                  quote: "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten."
-                description: Neil Gaiman, from the book Coraline
-              mistakes do something:
-                value:
-                  quote: "I hope that in this year to come, you make mistakes. Because if you are making mistakes... you're Doing Something."
-                description: Neil Gaiman is a genius.
+          required: true
       responses:
         '200':
-          description: Created
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Door'
+      tags:
+        - Not implemented
+        
+  /api/users/{userId}/doors/{doorId}/unlock:
+    put:
+      description: Unlock one door using doorId of a specific user using userId.
+      summary: Unlock one door using doorId of a specific user using userId.
+      operationId: unLockDoor
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: string
+          required: true
+        - in: path
+          name: doorId
+          schema:
+            type: integer
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Door'
+      tags:
+        - Not implemented
+        
+  /api/users/{userId}/doors/add:
+    post:
+      description: Add one door to the list of doors.
+      summary: Add one door to the list of doors.
+      operationId: addDoor
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Door'
+      tags:
+        - Not implemented
+        
+  /api/users/{userId}/doors/{doorId}/remove:
     delete:
-      description: Delete nice quote
-      operationId: deleteQuote
+      description: Remove one door from the list of doors.
+      summary: Remove one door from the list of doors.
+      operationId: removeDoor
       parameters:
         - in: path
-          name: quoteId
+          name: userId
+          schema:
+            type: string
           required: true
+        - in: path
+          name: doorId
           schema:
             type: integer
-          description: The quote Id
-          example: 55
+          required: true
       responses:
         '200':
-          description: Deleted
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Door'
+      tags:
+        - Not implemented
 
 components:
   schemas:
-    quote:
-      type: object
-      properties:
-        value:
-          type: string
-          x-faker: lorem.sentence
-          example: "Life is a disease: sexually transmitted, and invariably fatal."
-        id:
-          type: integer
-          minimum: 1
-          example: 8
-      required:
-        - value
-        - id
-      example:
-        value: See, the problem is that God gives men a brain and a penis, and only enough blood to run one at a time.
-        id: 89
-
     Incident:
       type: object
       required:
       - id
-      - label
       - type
-      - victim
-      - aggressor
+      - datetime
       - longitude
       - latitude
-      - time
-      - validity
+      - validated
+      - labels
+      - reporterId
       properties:
         id:
           type: integer
           example: 4
+        type:
+          type: string
+          example: "Assault"
+        datetime:
+          type: string
+          format: date-time
+          example: "2022-11-07T11:43:59.405931"
+        longitude:
+          type: string
+          example: "3.214377"
+        latitude:
+          type: string
+          example: "51.191624"
+        validated:
+          type: boolean
+          example: true
         labels:
           type: array
           items:
             oneOf:
               - type: string
-          example: ["lethal weapon", "critical condition", "child endangerment"]
-        type:
-          type: string
-          example: "Assault"
+          example: ["Armed", "Child Danger", "Critical Condition", "Under Control"]
         reporterId:
           type: string
           example: "1989-01-28_AL"
-        aggressorId:
-          type: string
-          example: "1992-02-04_SH"
-        latitude:
-          type: string
-          example: "51.191624"
-        longitude:
-          type: string
-          example: "3.214377"
-        time:
-          type: string
-          format: date-time
-          example: "2022-11-07T11:43:59.405931"
-        validity:
-          type: boolean
-          example: true
 
     User:
       type: object
@@ -459,6 +466,20 @@ components:
           type: boolean
           example: true
     
+    Door:
+      type: object
+      required:
+       - id
+       - locked
+      properties:
+        id:
+          type: integer
+          example: 5
+        locked:
+          type: boolean
+          example: true
+    
+    
     IncidentSet:
       type: array
       items:
@@ -468,3 +489,8 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/User'
+    
+    DoorSet:
+      type: array
+      items:
+        $ref: '#/components/schemas/Door'
