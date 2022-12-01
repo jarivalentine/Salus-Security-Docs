@@ -90,6 +90,22 @@ paths:
       tags:
         - Incidents
 
+    delete:
+      description: Delete one incident
+      summary: Delete one incidents.
+      operationId: deleteIncident
+      parameters:
+        - in: path
+          name: incidentId
+          schema:
+            type: integer
+          required: true
+      responses:
+          200:
+              description: Incident deleted
+      tags:
+        - Incidents
+
   /api/incidents/{incidentId}/bystanders:
     get:
       description: Retrieve all bystanders from one incident.
