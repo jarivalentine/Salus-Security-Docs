@@ -6,6 +6,7 @@
 ![code_smells](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=code_smells)
 ![ncloc](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=ncloc)
 ![maintainablity](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=sqale_rating)
+![coverage](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=coverage)
 
 ### server badges
 ![reliability-rating](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=reliability_rating)
@@ -14,6 +15,7 @@
 ![code_smells](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=code_smells)
 ![ncloc](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=ncloc)
 ![maintainablity](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=sqale_rating)
+![coverage](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=coverage)
 
 ## What is Salus Security?
 Salus Security is a company that focuses on the security of Mars-citizens. With our application we want to help the community on Mars keep themselves but more <b>importantly</b> eachother safe in a world without law-enforcements.
