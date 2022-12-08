@@ -34,6 +34,7 @@ from the gitlab or using the following `command` in 'cmd/git BASH' in your preff
         - node: version 18.12.1
     - ...
 
+
 *_NOTE:_* make sure you have these versions installed before continuing.
 
 3. From here on out, you can explore application.
@@ -54,7 +55,7 @@ from gitlab or by using the following `command` in 'cmd/git BASH' within your pr
 
 
 ## Features
-this is a list of every feature in the application.
+This is a list of every feature in the application.
 ![homepage](./images/homepage.png)
 
 - Available for all users
@@ -76,7 +77,7 @@ this is a list of every feature in the application.
     - Statistics
         - Statistics and Analytics about the reported incidents we have recieved from our users.
         ![charts-preview](./images/charts-img.png)
-    - change the notification range on the homepage
+    - Change the notification range on the homepage
 
 
 ## API Specs
@@ -84,7 +85,7 @@ Our API documentation can by found [here](https://git.ti.howest.be/TI/2022-2023/
 
 
 ## Support
-If you have any questions or are interested in becoming a partner/employee , makes sure to [contact us](https://sites.google.com/student.howest.be/mars-group11/hr/contact-us?authuser=1).
+If you have any questions or are interested in becoming a partner/employee, makes sure to [contact us](https://sites.google.com/student.howest.be/mars-group11/hr/contact-us?authuser=1).
 
 ## Marketing Website
 Feel free to take a look at our Marketing Website on our [website](https://sites.google.com/student.howest.be/mars-group11/homepage?authuser=1).
