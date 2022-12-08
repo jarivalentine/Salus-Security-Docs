@@ -149,6 +149,27 @@ paths:
                 $ref: '#/components/schemas/UserSet'
       tags:
         - Incidents
+  
+  /api/incidents/{id}/validate:
+    put:
+      description: AI will validate the incident and change the 'ACTIVE' to either 'CONFIRMED' or 'DENIED'.
+      summary: Validate incident by changing the 'state' field.
+      operationId: validateIncident
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Incident'
+      tags:
+        - Incidents
 
   /api/users:
     get:
@@ -428,7 +449,7 @@ components:
       - datetime
       - longitude
       - latitude
-      - validated
+      - state
       - labels
       - reporterId
       properties:
@@ -448,9 +469,10 @@ components:
         latitude:
           type: string
           example: "51.191624"
-        validated:
-          type: boolean
-          example: true
+        state:
+          type: string
+          enum: ["ACTIVE", "CONFIRMED", "DENIED"]
+          example: "CONFIRMED"
         labels:
           type: array
           items:
@@ -481,7 +503,7 @@ components:
         subscribed:
           type: boolean
           example: true
-    
+          
     Door:
       type: object
       required:
