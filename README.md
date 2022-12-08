@@ -29,10 +29,11 @@ from the gitlab or using the following `command` in 'cmd/git BASH' in your preff
 (you won't have this option if you don't have the live-server extention installed. [VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or in extensions by searching for `Live Server`)
 3. From here on out, you can explore application.
 
-**_NOTE:_** for flagging incidents or to view the map you need to have your location enabled.
+**_NOTE:_** for flagging incidents you need to have your location enabled.
 
 
 ## Features
+this is a list of every feature in the application.
 - Available for all users
 ![homepage](./images/homepage.png)
     - Flag incident
@@ -52,7 +53,7 @@ from the gitlab or using the following `command` in 'cmd/git BASH' in your preff
         - A map of incident records with narrow-down options and navigation.
     - Statistics
         - Statistics and Analytics about the reported incidents we have recieved from our users.
-        ![charts-preview](./images/charts-placeholder.PNG)
+        ![charts-preview](./images/charts-img.png)
     - change the notification range on the homepage
 
 
