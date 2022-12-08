@@ -19,10 +19,13 @@
 Salus Security is a company that focuses on the security of Mars-citizens. With our application we want to help the community on Mars keep themselves but more <b>importantly</b> eachother safe in a world without law-enforcements.
 
 ## Quick start ![info](./images/svg-info.svg)
-[first]() You clone the client repository using:
-from the gitlab or uning the following `command` in cmd in your perfered floder. 
-> git clone https://git.ti.howest.be/TI/2022-2023/s3/analysis-and-development-project/projects/group-11/client.git 
+1. <b>First of all</b> you need clone the client repository
+from the gitlab or using the following `command` in 'cmd/git BASH' in your preffered folder. 
+    - > git clone https://git.ti.howest.be/TI/2022-2023/s3/analysis-and-development-project/projects/group-11/client.git 
 
+2. <b>Then</b> you open the folder in VS code and go to the index.html file. On this file you Right-mouse-click and open the file with live-server. 
+(you won't have this option if you don't have the live-server extention installed. [VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or in extensions by searching for `Live Server`)
+3. From here on out, you can explore application.
 
 
 ## Features
@@ -50,7 +53,7 @@ from the gitlab or uning the following `command` in cmd in your perfered floder.
 
 
 ## API Specs
-api documentation:[API_info](https://git.ti.howest.be/TI/2022-2023/s3/analysis-and-development-project/projects/group-11/client.git )
+Our API documentation can by found [here](https://git.ti.howest.be/TI/2022-2023/s3/analysis-and-development-project/projects/group-11/documentation/-/blob/main/api-spec/openapi-mars.yaml ).
 
 
 ## Support
