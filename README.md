@@ -25,7 +25,7 @@ from the gitlab or using the following `command` in 'cmd/git BASH' in your preff
     - > git clone https://git.ti.howest.be/TI/2022-2023/s3/analysis-and-development-project/projects/group-11/server.git 
 
 
-2. prerequirements that are needed before going in to the code.
+2. prerequirements that are needed before going into the code.
     - any kind of text-editor (Visual Studio Code, IntelliJ,...)
     - terminal installs
         - Java: openjdk version 11.0.17 (latest)
@@ -37,7 +37,7 @@ from the gitlab or using the following `command` in 'cmd/git BASH' in your preff
 
 *_NOTE:_* make sure you have these versions installed before continuing.
 
-3. From here on out, you can explore application.
+3. "learn more about the server for information."
 
 
 ## ![info](./images/info-img-32.png) Quick start (client side) 
@@ -85,10 +85,11 @@ Our API documentation can by found [here](https://git.ti.howest.be/TI/2022-2023/
 
 
 ## Support
-If you have any questions or are interested in becoming a partner/employee, makes sure to [contact us](https://sites.google.com/student.howest.be/mars-group11/hr/contact-us?authuser=1).
+If you have any questions or are interested in becoming a partner/employee, be sure to [contact us](https://sites.google.com/student.howest.be/mars-group11/hr/contact-us?authuser=1).
 
 ## Marketing Website
 Feel free to take a look at our Marketing Website on our [website](https://sites.google.com/student.howest.be/mars-group11/homepage?authuser=1).
 
 ## Credits
 - <a target="_blank" href="https://icons8.com/icon/VQOfeAx5KWTK/info">Info</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- Writen by `De Caluwé Branko`
