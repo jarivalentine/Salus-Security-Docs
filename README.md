@@ -19,6 +19,31 @@
 ## What is Salus Security?
 Salus Security is a company that focuses on the security of Mars-citizens. With our application we want to help the community on Mars keep themselves but more <b>importantly</b> eachother safe in a world without law-enforcements.
 
+## Features
+This is a list of every feature in the application.
+![homepage](./images/homepage.png)
+
+- Available for all users
+    - Flag incident
+        - Notification gets send out (for others to assist).
+        - A recording will be made of the incident
+        - AI will label and validate the crime.
+    - View live notifications of reported incincents.
+        - The user can get the route towards the incident to assist with the report or help the citizen in danger.
+    - A settings page to personalize your notifications and purchase Premium plan.
+
+- Premium Features
+    - History
+        - Two lists of incident records:
+            - incidents you have reported.
+            - incidents you have helped reporting.
+    - Map
+        - A map of incident records with narrow-down options and navigation.
+    - Statistics
+        - Statistics and Analytics about the reported incidents we have recieved from our users.
+        ![charts-preview](./images/charts-img.png)
+    - Change the notification range on the homepage
+
 ## ![info](./images/info-img-32.png) Quick start (server side) 
 1. <b>First of all</b> you need clone the server repository
 from the gitlab or using the following `command` in 'cmd/git BASH' in your preffered folder. 
@@ -52,32 +77,6 @@ from gitlab or by using the following `command` in 'cmd/git BASH' within your pr
 3. From here on out, you can use the application.
 
 **_NOTE:_** for flagging incidents you need to have your location enabled.
-
-
-## Features
-This is a list of every feature in the application.
-![homepage](./images/homepage.png)
-
-- Available for all users
-    - Flag incident
-        - Notification gets send out (for others to assist).
-        - A recording will be made of the incident
-        - AI will label and validate the crime.
-    - View live notifications of reported incincents.
-        - The user can get the route towards the incident to assist with the report or help the citizen in danger.
-    - A settings page to personalize your notifications and purchase Premium plan.
-
-- Premium Features
-    - History
-        - Two lists of incident records:
-            - incidents you have reported.
-            - incidents you have helped reporting.
-    - Map
-        - A map of incident records with narrow-down options and navigation.
-    - Statistics
-        - Statistics and Analytics about the reported incidents we have recieved from our users.
-        ![charts-preview](./images/charts-img.png)
-    - Change the notification range on the homepage
 
 
 ## API Specs
