@@ -471,7 +471,7 @@ components:
           example: "51.191624"
         state:
           type: string
-          enum: ["ACTIVE", "CONFIRMED", "DENIED"]
+          enum: ["ACTIVE", "CONFIRMED", "DECLINED"]
           example: "CONFIRMED"
         labels:
           type: array
