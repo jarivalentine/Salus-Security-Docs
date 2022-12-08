@@ -27,6 +27,8 @@ from the gitlab or using the following `command` in 'cmd/git BASH' in your preff
 (you won't have this option if you don't have the live-server extention installed. [VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or in extensions by searching for `Live Server`)
 3. From here on out, you can explore application.
 
+**_NOTE:_** for flagging incidents or to view the map you need to have your location enabled.
+
 
 ## Features
 - Available for all users
