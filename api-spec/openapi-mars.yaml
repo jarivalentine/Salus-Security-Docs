@@ -152,7 +152,7 @@ paths:
   
   /api/incidents/{id}/validate:
     put:
-      description: AI will validate the incident and change the 'ACTIVE' to either 'CONFIRMED' or 'DENIED'.
+      description: AI will validate the incident and change the 'ACTIVE' to either 'CONFIRMED' or 'DECLINED'.
       summary: Validate incident by changing the 'state' field.
       operationId: validateIncident
       parameters:
@@ -471,7 +471,7 @@ components:
           example: "51.191624"
         state:
           type: string
-          enum: ["ACTIVE", "CONFIRMED", "DENIED"]
+          enum: ["ACTIVE", "CONFIRMED", "DECLINED"]
           example: "CONFIRMED"
         labels:
           type: array
