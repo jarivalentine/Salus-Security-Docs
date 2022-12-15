@@ -16,6 +16,18 @@
 ![duplicated_lines_density](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=duplicated_lines_density)
 ![coverage](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=coverage)
 
+## Table of Contents
+- [What is Salus Security?](#what-is-salus-security)
+- [Features](#features)
+- [Installation](#installation)
+    - [Prerequisites](#prerequisites)
+    - [Quick Start Server](#quick-start-server-side)
+    - [Quick Start Client](#quick-start-client-side)
+- [API-Spec](#api-specs)
+- [Support](#support)
+- [Marketing](#marketing-website)
+- [Credits](#credits)
+
 ## What is Salus Security?
 Salus Security is a company that focuses on the security of Mars-citizens. With our application we want to help the community on Mars keep themselves but more <b>importantly</b> eachother safe in a world without law-enforcements.
 
@@ -44,39 +56,32 @@ This is a list of every feature in the application.
         ![charts-preview](./images/charts-img.png)
     - Change the notification range on the homepage
 
-## ![info](./images/info-img-32.png) Quick start (server side) 
-1. <b>First of all</b> you need clone the server repository
-from the gitlab or using the following `command` in 'cmd/git BASH' in your preffered folder. 
-    - > git clone https://git.ti.howest.be/TI/2022-2023/s3/analysis-and-development-project/projects/group-11/server.git 
-
-
-2. prerequirements that are needed before going into the code.
-    - any kind of text-editor (Visual Studio Code, IntelliJ,...)
-    - terminal installs
-        - Java: openjdk version 11.0.17 (latest)
-        - npm: version 8.19.2 
-        - sass: version 1.56.1 
-        - node: version 18.12.1
+## ![info](./images/info-img-32.png) Installation
+### Prerequisites
+- any kind of text-editor 
+    - Visual Studio Code
+    - IntelliJ
     - ...
-
+- terminal installs
+    - Java: openjdk version 11.0.17 (latest)
+    - npm: version 8.19.2 
+    - sass: version 1.56.1 
+    - nodejs: version 18.12.1
 
 *_NOTE:_* make sure you have these versions installed before continuing.
+- have both (Server and Client) folders cloned into a directory from gitlab or the following commands:
+    - Server: 
+    `git clone https://git.ti.howest.be/TI/2022-2023/s3/analysis-and-development-project/projects/group-11/server.git`
+    - Client: 
+    `git clone https://git.ti.howest.be/TI/2022-2023/s3/analysis-and-development-project/projects/group-11/server.git`
 
-3. "learn more about the server for information."
+
+###  Quick start (server side) 
+1. 
 
 
-## ![info](./images/info-img-32.png) Quick start (client side) 
-1. <b>First of all</b> clone the client repository
-from gitlab or by using the following `command` in 'cmd/git BASH' within your preffered folder. 
-    - > git clone https://git.ti.howest.be/TI/2022-2023/s3/analysis-and-development-project/projects/group-11/client.git 
-
-2. <b>Then</b> you open the folder in VS code and go to the index.html file. On this file you Right-mouse-click and open the file with live-server. 
-
-(you won't have this option unless you have the live-server extention installed. [VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) or in extensions by searching for `Live Server`)
-
-3. From here on out, you can use the application.
-
-**_NOTE:_** for flagging incidents you need to have your location enabled.
+### Quick start (client side) 
+1. 
 
 
 ## API Specs
