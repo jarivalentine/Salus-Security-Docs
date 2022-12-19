@@ -154,7 +154,7 @@ paths:
       tags:
         - Incidents
   
-  /api/incidents/{incidentId}/validate:
+  /api/incidents/{incidentId}/validate/{id}:
     put:
       description: AI will validate the incident and change the 'ACTIVE' to either 'CONFIRMED' or 'DECLINED'.
       summary: Validate incident by changing the 'state' field.
@@ -162,6 +162,11 @@ paths:
       parameters:
         - in: path
           name: incidentId
+          schema:
+            type: integer
+          required: true
+        - in: path
+          name: id
           schema:
             type: integer
           required: true
