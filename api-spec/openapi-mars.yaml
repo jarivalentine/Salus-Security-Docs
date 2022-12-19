@@ -319,14 +319,14 @@ paths:
       tags:
         - Users
 
-  /api/users/{userId}/validate/{type}:
+  /api/users/{id}/validate/{type}:
     get:
       description: Check if the type of incident is rightly connected with the user.
       summary: Check if the type of incident is rightly connected with the user.
       operationId: validateUser
       parameters:
         - in: path
-          name: userId
+          name: id
           schema:
             type: string
           required: true
