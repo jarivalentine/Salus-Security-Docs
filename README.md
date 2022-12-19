@@ -3,22 +3,22 @@
 ![Salus Security](./images/logo_salus.png)
 
 ### Sonar client badges
-![reliability-rating](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=reliability_rating)
-![vulnerabilities](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=vulnerabilities)
-![security_rating](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=security_rating)
-![code_smells](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=code_smells)
-![ncloc](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=ncloc)
-![maintainablity](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=sqale_rating)
-![coverage](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-client-11&metric=coverage)
+![reliability-rating](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-client-11&metric=reliability_rating)
+![vulnerabilities](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-client-11&metric=vulnerabilities)
+![security_rating](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-client-11&metric=security_rating)
+![code_smells](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-client-11&metric=code_smells)
+![ncloc](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-client-11&metric=ncloc)
+![maintainablity](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-client-11&metric=sqale_rating)
+![coverage](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-client-11&metric=coverage)
 
 ### Sonar server badges
-![reliability-rating](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=reliability_rating)
-![vulnerabilities](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=vulnerabilities)
-![security_rating](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=security_rating)
-![code_smells](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=code_smells)
-![ncloc](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=ncloc)
-![maintainablity](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=sqale_rating)
-![coverage](https://sonar.ti.howest.be/api/project_badges/measure?project=2022.project-ii:mars-server-11&metric=coverage)
+![reliability-rating](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-server-11&metric=reliability_rating)
+![vulnerabilities](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-server-11&metric=vulnerabilities)
+![security_rating](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-server-11&metric=security_rating)
+![code_smells](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-server-11&metric=code_smells)
+![ncloc](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-server-11&metric=ncloc)
+![maintainablity](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-server-11&metric=sqale_rating)
+![coverage](https://sonar.ti.howest.be/badges/project_badges/measure?project=2022.project-ii:mars-server-11&metric=coverage)
 
 ## Table Of Contents:
 - [What is Salus Security?](#what-is-salus-security)
@@ -139,9 +139,13 @@ This is a list of every feature in the application.
       - The best bystanders.
       - Validation frequency
 
+- Console Commands:
+  - Change the current user:
+    - ``login("UserId")``
+
 **HOME PAGE:**
 
-<img src="./images/home-page.jpg" width="600" height="300" alt="home" title="home">
+<img src="./images/home-page.jpg" width="500" height="300" alt="home" title="home">
 
 **SETTINGS:**
 
@@ -149,7 +153,7 @@ This is a list of every feature in the application.
 
 **SAFETY MAP:**
 
-<img src="./images/maps.png" width="650" height="300" alt="maps" title="maps">
+<img src="./images/maps.png" width="500" height="300" alt="maps" title="maps">
 
 **CHARTS:**
 
