@@ -14,6 +14,8 @@ tags:
     description: Retrieve and create incidents.
   - name: Users
     description: Retrieve user information.
+  - name: Notifications
+    description: Endpoints for push notifications
   - name: Partners
     description: Endpoints for partner (Marsian)
   - name: Not implemented
@@ -318,6 +320,31 @@ paths:
                 $ref: '#/components/schemas/User'
       tags:
         - Users
+  
+  /api/subscribe:
+    post:
+      description: subscribe to push notifications
+      operationId: postSubscription
+      tags: 
+        - Notifications
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                endpoint:
+                  type: string
+                key:
+                  type: string
+                auth:
+                  type: string
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: Error
 
   /api/users/{id}/validate/{type}:
     get:
