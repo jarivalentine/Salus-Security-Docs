@@ -15,7 +15,7 @@ tags:
   - name: Users
     description: Retrieve user information.
   - name: Partners
-    description: Endpoints for partner (Marsian)
+    description: Endpoints for partner (Martian)
   - name: Not implemented
     description: Endpoints outside of our POC
 
