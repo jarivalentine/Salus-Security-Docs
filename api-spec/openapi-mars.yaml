@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: 'Salus Security'
   description: 'Salus Security is a company that focuses on the security of Mars-citizens. With our application we want to help the community on Mars keep themselves but more importantly each other safe. We will be achieving this in a world without law-enforcements.'
-  version: 0.1.6
+  version: 0.1.8
 servers:
   - url: https://project-ii.ti.howest.be/mars-11
     description: 'Public API'
