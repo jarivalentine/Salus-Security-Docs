@@ -325,8 +325,6 @@ paths:
     post:
       description: subscribe to push notifications
       operationId: postSubscription
-      security:
-          - userAuth: []
       tags: 
         - Notifications
       requestBody:
