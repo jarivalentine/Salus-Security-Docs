@@ -14,6 +14,8 @@ tags:
     description: Retrieve and create incidents.
   - name: Users
     description: Retrieve user information.
+  - name: Partners
+    description: Endpoints for partner (Marsian)
   - name: Not implemented
     description: Endpoints outside of our POC
 
@@ -101,7 +103,7 @@ paths:
             type: integer
           required: true
       responses:
-          200:
+          '200':
               description: Incident deleted
       tags:
         - Incidents
@@ -316,7 +318,28 @@ paths:
                 $ref: '#/components/schemas/User'
       tags:
         - Users
-  
+
+  /api/users/{id}/validate/{type}:
+    get:
+      description: Check if the type of incident is rightly connected with the user.
+      summary: Check if the type of incident is rightly connected with the user.
+      operationId: validateUser
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+        - in: path
+          name: type
+          schema:
+            type: string
+          required: true
+      responses:
+          '200':
+              description: user validated
+      tags:
+        - Partners
 
   /api/users/{userId}/doors:
     get:
