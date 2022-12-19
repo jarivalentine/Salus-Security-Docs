@@ -17,7 +17,7 @@ tags:
   - name: Notifications
     description: Endpoints for push notifications
   - name: Partners
-    description: Endpoints for partner (Marsian)
+    description: Endpoints for partner (Martian)
   - name: Not implemented
     description: Endpoints outside of our POC
 
