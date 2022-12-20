@@ -29,7 +29,7 @@
 	- [Server: Running and Tests](#server-running-and-tests)
 - [Features](#features)
 - [POC-topics](#poc-topics)
-  - [Class-taught](#class-thaught)
+  - [Class-taught](#class-taught)
   - [Self-taught](#self-taught)
 - [API Spec](#api-spec)
 - [Support](#support)
