@@ -28,6 +28,9 @@
 	- [Server: Setup](#server-setup)
 	- [Server: Running and Tests](#server-running-and-tests)
 - [Features](#features)
+- [POC-topics](#poc-topics)
+  - [Class-taught](#class-taught)
+  - [Self-taught](#self-taught)
 - [API Spec](#api-spec)
 - [Support](#support)
 - [Marketing Website](#marketing-website)
@@ -163,6 +166,26 @@ This is a list of every feature in the application.
 
 <img src="./images/history.png" width="500" height="300" alt="history" title="history">
 
+---
+## POC-topics
+---
+### Class taught 
+---
+- Graphs (Canvas, SVG and/or Chart.js) 
+- Maps
+---
+### Self taught 
+---
+- Level 1:
+  - Fullscreen API
+  - Extensive use of CSS compiler SASS features (variables/nesting/mixins use-forward/...)
+  - Use of higher order functions on the server (e.g. predicates avoid loops)
+- Level 2:
+  - Push notifications (via Push API and Notification API)
+- Level 3:
+  - Vue.js implementation for full client
+
+**Total self taught score: 8**
 ---
 ## API Spec
 ---
