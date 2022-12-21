@@ -28,6 +28,12 @@ paths:
       description: Retrieve all incidents.
       summary: Retrieve all incidents.
       operationId: getIncidents
+      parameters:
+        - in: query
+          name: active
+          schema:
+            type: boolean
+          required: true
       responses:
         '200':
           description: OK
