@@ -387,7 +387,7 @@ paths:
 
   /api/users/{userId}/doors/{doorId}:
     get:
-      description: Retrieve one doors from one user.
+      description: Retrieve one doors from one user and other user with access.
       summary: Retrieve one doors from one user.
       operationId: getDoorByUserId
       parameters:
@@ -406,9 +406,15 @@ paths:
         '200':
           description: OK
           content:
-            application/json:
+            application/json: 
               schema:
-                $ref: '#/components/schemas/DoorSet'
+                properties:
+                  door:
+                    $ref: '#/components/schemas/Door'
+                  access:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/User'
       tags:
         - Not implemented
   
