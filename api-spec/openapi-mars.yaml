@@ -535,6 +535,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NotificationSet'
+      tags:
+        - Not implemented
     post:
       description: Add one notification to the list of notifications.
       summary: Add one notification to the list of notifications.
