@@ -100,22 +100,6 @@ paths:
       tags:
         - Incidents
 
-    delete:
-      description: Delete one incident
-      summary: Delete one incidents.
-      operationId: deleteIncident
-      parameters:
-        - in: path
-          name: incidentId
-          schema:
-            type: integer
-          required: true
-      responses:
-          '200':
-              description: Incident deleted
-      tags:
-        - Incidents
-
   /api/incidents/{incidentId}/bystanders:
     get:
       description: Retrieve all bystanders from one incident.
@@ -400,6 +384,33 @@ paths:
                 $ref: '#/components/schemas/DoorSet'
       tags:
         - Not implemented
+
+  /api/users/{userId}/doors/{doorId}:
+    get:
+      description: Retrieve one doors from one user.
+      summary: Retrieve one doors from one user.
+      operationId: getDoorByUserId
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: string
+          required: true
+        - in: path
+          name: doorId
+          schema:
+            type: integer
+          required: true
+
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DoorSet'
+      tags:
+        - Not implemented
   
   /api/users/{userId}/doors/{doorId}/lock:
     put:
@@ -570,10 +581,14 @@ components:
       required:
        - id
        - locked
+       - name
       properties:
         id:
           type: integer
           example: 5
+        name:
+          type: string
+          example: "Front door"
         locked:
           type: boolean
           example: true
