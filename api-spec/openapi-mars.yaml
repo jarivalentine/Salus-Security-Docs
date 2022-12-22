@@ -516,6 +516,64 @@ paths:
                 $ref: '#/components/schemas/Door'
       tags:
         - Not implemented
+      
+  /api/users/{userId}/notifications:
+    get:
+      description: Retrieve all notifications from one user.
+      summary: Retrieve all notifications from one user.
+      operationId: getNotificationsByUserId
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationSet'
+    post:
+      description: Add one notification to the list of notifications.
+      summary: Add one notification to the list of notifications.
+      operationId: addNotification
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: string
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+              schema:
+                  type: object
+                  required:
+                  - name
+                  - description
+                  properties:
+                    name:
+                      type: string
+                      example: "New incident"
+                    description:
+                      type: string
+                      example: "There is a new incident near you."
+                    incidentId:
+                      type: integer
+                      example: 3
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Notification'
+      tags:
+        - Not implemented
+
 
 components:
   schemas:
@@ -598,7 +656,30 @@ components:
         locked:
           type: boolean
           example: true
-    
+
+    Notification:
+      type: object
+      required:
+       - id
+       - name
+       - description
+       - viewed
+      properties:
+        id:
+          type: integer
+          example: 5
+        name:
+          type: string
+          example: "New incident"
+        description:
+          type: string
+          example: "New incident reported by Adison Lopez 1km away from you."
+        viewed:
+          type: boolean
+          example: false
+        incidentId:
+          type: integer
+          example: 4
     
     IncidentSet:
       type: array
@@ -614,3 +695,8 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/Door'
+
+    NotificationSet:
+      type: array
+      items:
+        $ref: '#/components/schemas/Notification'
