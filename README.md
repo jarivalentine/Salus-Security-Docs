@@ -148,23 +148,31 @@ This is a list of every feature in the application.
 
 **HOME PAGE:**
 
-<img src="./images/home-page.jpg" width="500" height="300" alt="home" title="home">
+<img src="./images/home-page.png" width="500" height="300" alt="home" title="home">
 
-**SETTINGS:**
+**REPORT PAGE:**
 
-<img src="./images/settings.png" width="500" height="300" alt="settings" title="settings">
+<img src="./images/report.png" width="500" height="300" alt="home" title="home">
 
 **SAFETY MAP:**
 
 <img src="./images/maps.png" width="500" height="300" alt="maps" title="maps">
 
-**CHARTS:**
+**ROUTE MAP:**
+
+<img src="./images/route.png" width="500" height="300" alt="maps" title="maps">
+
+**STATISTICS:**
 
 <img src="./images/charts.png" width="500" height="300" alt="charts" title="charts">
 
 **HISTORY:**
 
 <img src="./images/history.png" width="500" height="300" alt="history" title="history">
+
+**SETTINGS:**
+
+<img src="./images/settings.png" width="500" height="300" alt="settings" title="settings">
 
 ---
 ## POC-topics
